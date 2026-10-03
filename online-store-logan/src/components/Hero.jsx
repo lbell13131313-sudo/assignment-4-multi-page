@@ -12,12 +12,21 @@ function Hero({image}) {
                     className="image"
                 />
             </a>
+            
             <div className="hero-overlay">
                 <h2>Welcome to Logan's Tech Shop!</h2>
                 <h5>We have every piece of tech you could ask for!</h5>
                 <Link to={'/products'} className="link-button">
                     Shop Now
                 </Link>
+            </div>
+
+            <h3>Why Shop With Us?</h3>
+
+            <div>
+                <a></a>
+                <a></a>
+                <a></a>
             </div>
         </div>
     );

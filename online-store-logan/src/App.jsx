@@ -1,9 +1,6 @@
 import './App.css'
-import ProductCard from './components/ProductCard' // allows us to use the Product Card function from ProductCard.jsx
 import Header from './components/Header'
-import Hero from './components/Hero'
 import Footer from './components/Footer'
-import CartItem from './components/CartItem'
 
 import CartPage from './pages/CartPage'
 import HomePage from './pages/HomePage'
@@ -11,7 +8,7 @@ import ProductDetailsPage from './pages/ProductDetailsPage'
 import ProductPage from './pages/ProductPage'
 
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 
 // please note that my page is in dark mode
