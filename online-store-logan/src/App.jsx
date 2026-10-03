@@ -4,7 +4,14 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import Footer from './components/Footer'
 import CartItem from './components/CartItem'
+
+import CartPage from './pages/CartPage'
+import HomePage from './pages/HomePage'
+import ProductDetailsPage from './pages/ProductDetailsPage'
+import ProductPage from './pages/ProductPage'
+
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 
 // please note that my page is in dark mode
@@ -50,17 +57,8 @@ function App() {
     setAddCart(cart.filter((_, index) => index !== identification));
   };
 
-  // updates the total price of the shopping cart
-  const cartTotal = () => {
-    const total = cart.reduce((sum, item) => sum + item.price, 0);
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD',
-    }).format(total);
-  };
-
   return (
-    <div className="app">
+    <BrowserRouter className="app">
       {/* location that the home link will send you to*/}
       <a id="home">
         <Header
@@ -69,56 +67,9 @@ function App() {
         />
       </a>
 
-      {/* I had to change the link because my page is only 1124px wide for some reason I have no idea why */}
-      <Hero
-        image="src\assets\techProducts.png"
-      />
-
-      {/* location that the products link will send you to*/}
-      <h3 id="products">Featured Products</h3>
-
-      {/* allows the product cards to be in a row centered on the screen */}
-      <div className="product-row">
-        {/* supplies the props to the ProductCard function in ProductCard.jsx */}
-        {/* much more condensed and reusable now than it was before */}
-        {products.map(p => (
-          <ProductCard
-            identification={p.id}
-            name={p.name}
-            price={p.price}
-            image={p.image}
-            description={p.description}
-            onAddToCart={addToCart}
-          />
-        )) }
-      </div>
-
-      <h3>Shopping Cart</h3>
-      
-      {/* shopping cart display */}
-      <div className="cart-display">
-        {/* conditional rendering that displays a cart empty message when there are 0 items in the cart array */}
-        {cart.length > 0 ? (
-          <>
-            {cart.map((c, index) => (
-              <CartItem
-                identification={index}
-                name={c.name}
-                price={c.price}
-                onDeleteFromCart={deleteFromCart}
-              />
-            ))}
-            
-            <h3 className="total">
-              Total: {cartTotal()}
-            </h3>
-          </>
-        ) : (
-          <a className="empty-cart">
-            Your cart is empty
-          </a>
-        )}
-      </div>
+      <Routes>
+        <Route path="/" element={<HomePage />}/>
+      </Routes>
       
       {/* location that the contact link will send you to*/}
       <a id="contact">
@@ -129,7 +80,7 @@ function App() {
           address="123 Main Street, Nowhereville, NJ 12345"
         />
       </a>
-    </div>
+    </BrowserRouter>
   )
 }
 

@@ -13,7 +13,7 @@ function Footer({store_name, email, phone, address}) {
             <div className="footer_buttons">
                 {/* functionality for the about, privacy policy, and terms of service page links will be added later */}
                 <a>About</a>
-                <a href="#contact">Contact</a>
+                <a>Contact</a>
                 <a>Privacy Policy</a>
                 <a>Terms of Service</a>
             </div>
