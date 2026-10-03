@@ -1,0 +1,17 @@
+.product-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  margin-bottom: 16px;
+  padding: 16px;
+  width: 300px;
+}
+
+.price {
+  color: green;
+}
+
+.add-cart-button {
+  justify-content: center;
+  align-items: center;
+}

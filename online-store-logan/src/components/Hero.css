@@ -1,0 +1,30 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-color: #b366ff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease;
+}

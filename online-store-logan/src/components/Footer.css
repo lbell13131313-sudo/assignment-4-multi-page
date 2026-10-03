@@ -1,0 +1,29 @@
+.footer {
+    display: flex;
+}
+
+.store_info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 75%;
+    height: 150px;
+    background-color: #38264f;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+.footer_buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 25%;
+    height: 150px;
+    background-color: #38264f;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
