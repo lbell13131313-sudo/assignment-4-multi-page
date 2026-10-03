@@ -37,6 +37,20 @@ function App() {
       price: 249.00, 
       image: "https://placehold.co/300x200",
       description: "Plays both fullsize vinyls and mini vinyls"
+    },
+    {
+      id: 4,
+      name: "iPhone Case",
+      price: 29.49,
+      image: "https://placehold.co/300x200",
+      description: "Phone case for iPhone"
+    },
+    {
+      id: 5,
+      name: "HYTE Y70 Touch Infinite Tower",
+      price: 399.99,
+      image: "https://placehold.co/300x200",
+      description: "PC case with a touch screen function"
     }
   ];
 
@@ -69,6 +83,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />}/>
+        <Route path="/products" element={<ProductPage products={products} addToCart={addToCart}/>}/>
+        <Route path="/cart" element={<CartPage cart={cart} deleteFromCart={deleteFromCart}/>}/>
       </Routes>
       
       {/* location that the contact link will send you to*/}

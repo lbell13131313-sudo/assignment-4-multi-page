@@ -28,6 +28,7 @@
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
 
 /* will change the products display to column if on mobile */

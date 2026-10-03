@@ -1,6 +1,6 @@
-import CartItem from './components/CartItem'
+import CartItem from '../components/CartItem'
 
-function CartPage({products, deleteFromCart}) { // i will probably need to use cart instead of products
+function CartPage({cart, deleteFromCart}) { // i will probably need to use cart instead of products
     
     // updates the total price of the shopping cart
     const cartTotal = () => {

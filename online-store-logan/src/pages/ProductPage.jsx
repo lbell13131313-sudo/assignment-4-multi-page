@@ -1,4 +1,4 @@
-import ProductCard from './components/ProductCard' // allows us to use the Product Card function from ProductCard.jsx
+import ProductCard from '../components/ProductCard' // allows us to use the Product Card function from ProductCard.jsx
 
 function ProductPage({products, addToCart}) {
     return (
