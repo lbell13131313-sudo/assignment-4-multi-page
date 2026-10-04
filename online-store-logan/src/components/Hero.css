@@ -53,7 +53,7 @@
   margin-bottom: 40px;
 }
 
-/* will change the products display to column if on mobile */
+/* will change the info display to column if on mobile */
 @media (max-width: 768px) {
   .info-row {
     flex-direction: column;
