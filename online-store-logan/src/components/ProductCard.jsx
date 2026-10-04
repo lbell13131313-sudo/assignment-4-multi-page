@@ -17,7 +17,7 @@ function ProductCard({identification, name, price, image, description, onAddToCa
                     alt="Product image" 
                     className="image"
                 />
-                <a className="product-info">
+                <a>
                     <h3>{name}</h3>
                     <p>{description}</p>
                     <p className="price">{formattedCurrency}</p>

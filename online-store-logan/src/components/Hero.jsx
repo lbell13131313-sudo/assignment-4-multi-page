@@ -23,10 +23,19 @@ function Hero({image}) {
 
             <h3>Why Shop With Us?</h3>
 
-            <div>
-                <a></a>
-                <a></a>
-                <a></a>
+            <div className="info-row">
+                <a className="info-card">
+                    <h3>Quality Products</h3>
+                    <p>Carefully curated selection of tech items</p>
+                </a>
+                <a className="info-card">
+                    <h3>Fast Shipping</h3>
+                    <p>Get your orders delivered quickly and safely</p>
+                </a>
+                <a className="info-card">
+                    <h3>Great Support</h3>
+                    <p>Our team is here to help with any questions</p>
+                </a>
             </div>
         </div>
     );

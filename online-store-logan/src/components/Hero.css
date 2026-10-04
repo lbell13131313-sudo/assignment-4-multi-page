@@ -31,3 +31,31 @@
     text-align: center;
     transition: background-color 0.2s ease;
 }
+
+.info-card {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 4px;
+    border-radius: 4px;
+    background-color: #ead5ff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.info-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* will change the products display to column if on mobile */
+@media (max-width: 768px) {
+  .info-row {
+    flex-direction: column;
+  }
+}
