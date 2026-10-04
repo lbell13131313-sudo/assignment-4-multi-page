@@ -1,6 +1,6 @@
 import CartItem from '../components/CartItem'
 
-function CartPage({cart, deleteFromCart}) { // i will probably need to use cart instead of products
+function CartPage({cart, deleteFromCart}) { // i have to use cart instead of product because I have no need for product here but never much do need cart
     
     // updates the total price of the shopping cart
     const cartTotal = () => {
@@ -22,6 +22,7 @@ function CartPage({cart, deleteFromCart}) { // i will probably need to use cart 
                     <>
                         {cart.map((c, index) => (
                             <CartItem
+                                key={c.id}
                                 identification={index}
                                 name={c.name}
                                 price={c.price}

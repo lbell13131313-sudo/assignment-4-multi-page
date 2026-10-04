@@ -11,6 +11,7 @@ function ProductPage({products, addToCart}) {
                 {/* much more condensed and reusable now than it was before */}
                 {products.map(p => (
                     <ProductCard
+                        key={p.id}
                         identification={p.id}
                         name={p.name}
                         price={p.price}

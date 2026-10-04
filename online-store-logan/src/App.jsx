@@ -7,9 +7,8 @@ import HomePage from './pages/HomePage'
 import ProductDetailsPage from './pages/ProductDetailsPage'
 import ProductPage from './pages/ProductPage'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 
 // please note that my page is in dark mode
 function App() {
@@ -51,7 +50,25 @@ function App() {
     }
   ];
 
-  const [cart, setAddCart] = useState([]);
+  const [cart, setAddCart] = useState(() => {
+    // if the 'cart' exists in local storage, it loads it upon refresh, if not it gives an empty array
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    return savedCart;
+
+    // for some reason doing it this way didn't work for me
+    //const savedCart = localStorage.getItem('cart');
+    //return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  // ensures that upon every render, the 'cart' in local storage will be updated
+  useEffect(() => { 
+    try { 
+      localStorage.setItem('cart', JSON.stringify(cart));
+    } catch { 
+      // if there is an error, the console log will notify the user
+      console.warn('Could not save cart to localStorage:', error); 
+    }
+  }, [cart]);
 
   // allows the user to add items to a cart
   const addToCart = (identification) => {
